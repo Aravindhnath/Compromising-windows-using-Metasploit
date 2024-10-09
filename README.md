@@ -92,7 +92,7 @@ Notice the "PID/Program name" value for this connection, which is redacted
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
-![Output](Op11-eh6.jpeg)
+![Output](Op11-eh6.png)
 keyscan_dump	Shows the keystrokes captured so far
 ![Output](Op12-eh6.jpeg)
 
